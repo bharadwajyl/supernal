@@ -1,0 +1,141 @@
+/***********************************
+             HEADER
+************************************/
+header{
+    width:100vw;
+}
+
+header .bg_video{
+    position:fixed;
+}
+
+header .logo{
+    position:relative;
+    top:0;
+    left:50%;
+    z-index:1;
+    max-width:80px;
+    transform:translate(-50%, 0);
+    color:var(--white);
+    cursor:pointer;
+}
+
+header section{
+    width:70%;
+    min-height:100vh;
+    align-items:center;
+    z-index:1;
+}
+
+header .btn{
+    display:block;
+}
+
+@media (max-width:1200px){
+    header section:nth-child(4){
+        display:none;
+    }
+}
+
+@media (max-width:720px){
+    header{
+        padding:0 !important;
+    }
+    
+    header section{
+        width:100%;
+    }
+    
+    header .border_left:before{
+        display:none;
+    }
+}
+
+
+/***********************************
+             MAIN
+************************************/
+main div{
+    background-color:var(--dark);
+}
+
+/*DIVISION_1*/
+.division_1{
+    width:100%;
+}
+
+.cards{
+    align-items:center;
+    width:100vw;
+}
+
+.cards li{
+    max-width:55vw;
+    flex: 0 0 auto;
+    align-items:center;
+}
+
+.cards .title_header{
+    width:55vw;
+    z-index:1;
+}
+
+.cards .title_header:after, .cards .title_header:before{
+    content:"";
+    position:absolute;
+    top:50%;
+    right:-2rem;
+    transform:translate(0%, -50%) rotate(90deg);
+    width:93px;
+    height:60px;
+    background-image:url("../../assets/images/arrow.svg");
+    z-index:1;
+}
+
+.cards .title_header:before{
+    right:-6rem;
+}
+
+.cards .title_header .border_left:before{
+    left:-30px;
+}
+
+@media (max-width:920px){
+    .cards .title_header, .cards li{
+        width:70vw;
+        min-width:70vw;
+    }
+}
+
+@media (max-width:720px){
+    .cards .title_header, .cards li{
+        width:100vw;
+        min-width:100vw;
+    }
+    
+    .cards .title_header:before{
+        right:1.6rem;
+    }
+    
+    .cards .title_header:after, .cards .title_header:before{
+        right:5rem;
+        width:85px;
+        height:55px;
+    }
+    
+    .cards .title_header .border_left:before{
+        left:-20px;
+    }
+}
+
+
+
+/*DIVISION_2*/
+.division_2{
+    background-color:transparent;
+    padding:5rem 1rem;
+}
+
+.division_2 .btn{
+    display:block;
+}
